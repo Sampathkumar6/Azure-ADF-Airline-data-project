@@ -104,7 +104,7 @@ Everything sits in one resource group, `ADF_project_sam`:
     <th align="center">Incremental Ingestion</th>
   </tr>
   <tr>
-    <td align="center"><img src="docs/images/09_bronze_sql_incremental_pipeline.png" width="300" alt="Incremental Ingestion"></td>
+    <td align="center"><img src="docs/screenshots/09_bronze_sql_incremental_pipeline.png" width="300" alt="Incremental Ingestion"></td>
   </tr>
 </table>
 
