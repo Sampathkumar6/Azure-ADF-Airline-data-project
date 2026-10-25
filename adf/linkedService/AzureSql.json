@@ -1,0 +1,17 @@
+{
+    "name": "AzureSql",
+    "type": "Microsoft.DataFactory/factories/linkedservices",
+    "properties": {
+        "annotations": [],
+        "type": "AzureSqlDatabase",
+        "typeProperties": {
+            "server": "pastecredentails",
+            "database": "azuresqlDBproject1",
+            "encrypt": "mandatory",
+            "trustServerCertificate": false,
+            "authenticationType": "SQL",
+            "userName": "adminadmin",
+            "encryptedCredential": "pastecredentails"
+        }
+    }
+}

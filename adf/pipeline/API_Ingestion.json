@@ -1,0 +1,118 @@
+{
+    "name": "API_Ingestion",
+    "properties": {
+        "activities": [
+            {
+                "name": "Web_api_call",
+                "type": "WebActivity",
+                "dependsOn": [],
+                "policy": {
+                    "timeout": "0.12:00:00",
+                    "retry": 0,
+                    "retryIntervalInSeconds": 30,
+                    "secureOutput": false,
+                    "secureInput": false
+                },
+                "userProperties": [],
+                "typeProperties": {
+                    "method": "GET",
+                    "url": "https://raw.githubusercontent.com/anshlambagit/AnshLambaYoutube/refs/heads/main/ADF_Project/DimAirport.json"
+                }
+            },
+            {
+                "name": "Copy_Api_Data",
+                "type": "Copy",
+                "dependsOn": [
+                    {
+                        "activity": "Web_api_call",
+                        "dependencyConditions": [
+                            "Succeeded"
+                        ]
+                    }
+                ],
+                "policy": {
+                    "timeout": "0.12:00:00",
+                    "retry": 0,
+                    "retryIntervalInSeconds": 30,
+                    "secureOutput": false,
+                    "secureInput": false
+                },
+                "userProperties": [],
+                "typeProperties": {
+                    "source": {
+                        "type": "JsonSource",
+                        "storeSettings": {
+                            "type": "HttpReadSettings",
+                            "requestMethod": "GET"
+                        },
+                        "formatSettings": {
+                            "type": "JsonReadSettings"
+                        }
+                    },
+                    "sink": {
+                        "type": "JsonSink",
+                        "storeSettings": {
+                            "type": "AzureBlobFSWriteSettings"
+                        },
+                        "formatSettings": {
+                            "type": "JsonWriteSettings"
+                        }
+                    },
+                    "enableStaging": false,
+                    "translator": {
+                        "type": "TabularTranslator",
+                        "mappings": [
+                            {
+                                "source": {
+                                    "path": "$['airport_id']"
+                                },
+                                "sink": {
+                                    "path": "$['airport_id']"
+                                }
+                            },
+                            {
+                                "source": {
+                                    "path": "$['airport_name']"
+                                },
+                                "sink": {
+                                    "path": "$['airport_name']"
+                                }
+                            },
+                            {
+                                "source": {
+                                    "path": "$['city']"
+                                },
+                                "sink": {
+                                    "path": "$['city']"
+                                }
+                            },
+                            {
+                                "source": {
+                                    "path": "$['country']"
+                                },
+                                "sink": {
+                                    "path": "$['country']"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "inputs": [
+                    {
+                        "referenceName": "Dataset_api_src",
+                        "type": "DatasetReference"
+                    }
+                ],
+                "outputs": [
+                    {
+                        "referenceName": "Ds_api_sink",
+                        "type": "DatasetReference"
+                    }
+                ]
+            }
+        ],
+        "annotations": [],
+        "lastPublishTime": "2026-10-24T11:43:37Z"
+    },
+    "type": "Microsoft.DataFactory/factories/pipelines"
+}

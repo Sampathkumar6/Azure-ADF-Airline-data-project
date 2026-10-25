@@ -1,0 +1,17 @@
+{
+    "name": "FileServer1",
+    "type": "Microsoft.DataFactory/factories/linkedservices",
+    "properties": {
+        "annotations": [],
+        "type": "FileServer",
+        "typeProperties": {
+            "host": "pastepath",
+            "userId": "pasteuserid",
+            "encryptedCredential": "pastecreddential"
+        },
+        "connectVia": {
+            "referenceName": "pastename",
+            "type": "IntegrationRuntimeReference"
+        }
+    }
+}

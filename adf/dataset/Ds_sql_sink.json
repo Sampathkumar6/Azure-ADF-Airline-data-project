@@ -1,0 +1,21 @@
+{
+    "name": "Ds_sql_sink",
+    "properties": {
+        "linkedServiceName": {
+            "referenceName": "LSdatalake",
+            "type": "LinkedServiceReference"
+        },
+        "annotations": [],
+        "type": "Parquet",
+        "typeProperties": {
+            "location": {
+                "type": "AzureBlobFSLocation",
+                "folderPath": "sql",
+                "fileSystem": "bronze"
+            },
+            "compressionCodec": "none"
+        },
+        "schema": []
+    },
+    "type": "Microsoft.DataFactory/factories/datasets"
+}

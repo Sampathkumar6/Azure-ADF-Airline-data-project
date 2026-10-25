@@ -1,0 +1,37 @@
+{
+    "name": "Silver_Layer",
+    "properties": {
+        "activities": [
+            {
+                "name": "Silver Data flow",
+                "type": "ExecuteDataFlow",
+                "dependsOn": [],
+                "policy": {
+                    "timeout": "0.12:00:00",
+                    "retry": 0,
+                    "retryIntervalInSeconds": 30,
+                    "secureOutput": false,
+                    "secureInput": false
+                },
+                "userProperties": [],
+                "typeProperties": {
+                    "dataflow": {
+                        "referenceName": "datatransformation",
+                        "type": "DataFlowReference"
+                    },
+                    "compute": {
+                        "coreCount": 8,
+                        "computeType": "General"
+                    },
+                    "traceLevel": "None",
+                    "cacheSinks": {
+                        "firstRowOnly": true
+                    }
+                }
+            }
+        ],
+        "annotations": [],
+        "lastPublishTime": "2026-10-24T13:49:51Z"
+    },
+    "type": "Microsoft.DataFactory/factories/pipelines"
+}

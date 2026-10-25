@@ -1,0 +1,15 @@
+# secrets and local config: never commit these
+*.pem
+*.key
+*.pfx
+.env
+secrets.*
+*connectionstring*
+local.settings.json
+# editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.drawio.bkp
+*.drawio.dtmp

@@ -1,0 +1,12 @@
+{
+    "name": "LSdatalake",
+    "type": "Microsoft.DataFactory/factories/linkedservices",
+    "properties": {
+        "annotations": [],
+        "type": "AzureBlobFS",
+        "typeProperties": {
+            "url": "pasteurl",
+            "encryptedCredential": "pastecredential"
+        }
+    }
+}

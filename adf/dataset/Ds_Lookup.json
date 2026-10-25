@@ -1,0 +1,21 @@
+{
+    "name": "Ds_Lookup",
+    "properties": {
+        "linkedServiceName": {
+            "referenceName": "LSdatalake",
+            "type": "LinkedServiceReference"
+        },
+        "annotations": [],
+        "type": "Json",
+        "typeProperties": {
+            "location": {
+                "type": "AzureBlobFSLocation",
+                "fileName": "lastload.json",
+                "folderPath": "lastload",
+                "fileSystem": "monitor"
+            }
+        },
+        "schema": {}
+    },
+    "type": "Microsoft.DataFactory/factories/datasets"
+}
