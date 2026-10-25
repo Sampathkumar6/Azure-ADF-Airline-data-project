@@ -22,7 +22,7 @@ An end-to-end data engineering project on Azure. It ingests airline data from **
     <th align="center">Architecture</th>
   </tr>
   <tr>
-    <td align="center"><img src="docs/images/architecture.PNG" width="300" alt="Architecture"></td>
+    <td align="center"><img src="docs/images/architecture.png" width="300" alt="Architecture"></td>
   </tr>
 </table>
 
@@ -56,7 +56,7 @@ Everything sits in one resource group, `ADF_project_sam`:
     <th align="center">Resource groups</th>
   </tr>
   <tr>
-    <td align="center"><img src="docs/screenshots/01_resource_group_resources.PNG" width="300" alt="Resource groups"></td>
+    <td align="center"><img src="docs/screenshots/01_resource_group_resources.png" width="300" alt="Resource groups"></td>
   </tr>
 </table>
 
@@ -67,7 +67,7 @@ Everything sits in one resource group, `ADF_project_sam`:
     <th align="center">Linked Services</th>
   </tr>
   <tr>
-    <td align="center"><img src="docs/screenshots/05_linked_services.PNG" width="300" alt="Linked Services"></td>
+    <td align="center"><img src="docs/screenshots/05_linked_services.png" width="300" alt="Linked Services"></td>
   </tr>
 </table>
 
@@ -90,10 +90,10 @@ Everything sits in one resource group, `ADF_project_sam`:
     <th align="center">parentPipeline</th>
   </tr>
   <tr>
-    <td align="center"><img src="docs/screenshots/07_bronze_onprem_ingestion_pipeline.PNG" width="200" alt="Onprem Ingestion"></td>
-    <td align="center"><img src="docs/screenshots/08_bronze_api_ingestion_pipeline.PNG" width="200" alt="API_Ingestion"></td>
-    <td align="center"><img src="docs/screenshots/09_bronze_sql_incremental_pipeline.PNG" width="200" alt="Azuresql_to_datalake"></td>
-    <td align="center"><img src="docs/screenshots/12_parent_pipeline.PNG" width="200" alt="parentPipeline"></td>
+    <td align="center"><img src="docs/screenshots/07_bronze_onprem_ingestion_pipeline.png" width="200" alt="Onprem Ingestion"></td>
+    <td align="center"><img src="docs/screenshots/08_bronze_api_ingestion_pipeline.png" width="200" alt="API_Ingestion"></td>
+    <td align="center"><img src="docs/screenshots/09_bronze_sql_incremental_pipeline.png" width="200" alt="Azuresql_to_datalake"></td>
+    <td align="center"><img src="docs/screenshots/12_parent_pipeline.png" width="200" alt="parentPipeline"></td>
   </tr>
 </table>
 
@@ -104,7 +104,7 @@ Everything sits in one resource group, `ADF_project_sam`:
     <th align="center">Incremental Ingestion</th>
   </tr>
   <tr>
-    <td align="center"><img src="docs/images/09_bronze_sql_incremental_pipeline.PNG" width="300" alt="Incremental Ingestion"></td>
+    <td align="center"><img src="docs/images/09_bronze_sql_incremental_pipeline.png" width="300" alt="Incremental Ingestion"></td>
   </tr>
 </table>
 
@@ -145,7 +145,7 @@ Every stream passes through an **alter row** step with an upsert condition befor
     <th align="center">Silver Transformation</th>
   </tr>
   <tr>
-    <td align="center"><img src="docs/screenshots/14_silver_data_flow.PNG" width="300" alt="Silver Transformation"></td>
+    <td align="center"><img src="docs/screenshots/14_silver_data_flow.png" width="300" alt="Silver Transformation"></td>
   </tr>
 </table>
 
@@ -164,7 +164,7 @@ Pipeline `Gold_Layer` runs the **`DataServing`** data flow. It builds two star-s
     <th align="center">Gold Layer</th>
   </tr>
   <tr>
-    <td align="center"><img src="docs/screenshots/17_gold_data_flow.PNG" width="200" alt="Gold Layer"></td>
+    <td align="center"><img src="docs/screenshots/17_gold_data_flow.png" width="200" alt="Gold Layer"></td>
   </tr>
 </table>
 
@@ -184,7 +184,7 @@ The monitor view shows the full set of runs from development, including two fail
     <th align="center">Monitor log runs</th>
   </tr>
   <tr>
-    <td align="center"><img src="docs/screenshots/19_monitor_pipeline_runs.PNG" width="200" alt="Monitor log runs"></td>
+    <td align="center"><img src="docs/screenshots/19_monitor_pipeline_runs.png" width="200" alt="Monitor log runs"></td>
   </tr>
 </table>
 
@@ -212,8 +212,8 @@ The monitor view shows the full set of runs from development, including two fail
     <th align="center">Self hosting local</th>
   </tr>
   <tr>
-    <td align="center"><img src="docs/screenshots/06_datasets.PNG" width="200" alt="Pipeline datasets"></td>
-    <td align="center"><img src="docs/screenshots/04_self_hosted_ir_credentials.PNG" width="200" alt="Self hosting local"></td>
+    <td align="center"><img src="docs/screenshots/06_datasets.png" width="200" alt="Pipeline datasets"></td>
+    <td align="center"><img src="docs/screenshots/04_self_hosted_ir_credentials.png" width="200" alt="Self hosting local"></td>
   </tr>
 </table>
 
